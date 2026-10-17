@@ -375,7 +375,6 @@ struct AddMenuItemSheet: View {
                     Button("Сохранить") {
                         guard let p = Double(price.replacingOccurrences(of: ",", with: ".")), !name.isEmpty else { return }
                         let item = MenuItem(name: name, itemDescription: desc, price: p, weight: weight.isEmpty ? nil : weight, category: category, isHit: isHit, isNewItem: isNew)
-                        menuVM... // placeholder avoided below
                         DataService.shared.addMenuItem(item)
                         menuVM.load()
                         dismiss()
