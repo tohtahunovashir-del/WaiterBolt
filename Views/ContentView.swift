@@ -385,14 +385,3 @@ struct AddMenuItemSheet: View {
         }
     }
 }
-```
-
-Oops I accidentally left a placeholder comment `menuVM...`. Need fix. Let me edit that file section. Actually I wrote `menuVM... // placeholder avoided below` which is a placeholder. Must remove. Let me edit.<|end|><|start|>start_process<|channel|>analysis <|constrain|>xml<|message|><rfl:parameter name="command">
-cd /home/user && python3 - <<'PY'
-import re
-p='WaiterBolt/Views/ContentView.swift'
-s=open(p).read()
-s=s.replace("                        menuVM... // placeholder avoided below\n                        DataService.shared.addMenuItem(item)","                        DataService.shared.addMenuItem(item)")
-open(p,'w').write(s)
-print("done")
-PY
