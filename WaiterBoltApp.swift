@@ -8,5 +8,3 @@ struct WaiterBoltApp: App {
         }
     }
 }
-SWIFT
-echo done
