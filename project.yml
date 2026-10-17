@@ -1,0 +1,34 @@
+name: WaiterBolt
+options:
+  bundleIdPrefix: com.waiterbolt
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "15.0"
+targets:
+  WaiterBolt:
+    type: application
+    platform: iOS
+    sources:
+      - WaiterBoltApp.swift
+      - Models
+      - Services
+      - ViewModels
+      - Views
+      - Components
+      - Utilities
+    resources:
+      - Assets.xcassets
+      - LaunchScreen.storyboard
+      - Info.plist
+    info:
+      path: Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.waiterbolt.app
+        SWIFT_VERSION: "5.9"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        CODE_SIGNING_ALLOWED: NO
+        CODE_SIGNING_REQUIRED: NO
+        CODE_SIGN_IDENTITY: ""
+        DEVELOPMENT_TEAM: ""
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
