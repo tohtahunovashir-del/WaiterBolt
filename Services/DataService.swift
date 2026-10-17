@@ -28,7 +28,7 @@ final class DataService {
         }
     }
 
-    private func save() {
+    func save() {
         if let data = try? JSONEncoder().encode(store) {
             try? data.write(to: fileURL, options: .atomic)
         }
