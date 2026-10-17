@@ -101,7 +101,7 @@ struct OrderDetailView: View {
             orderVM.currentOrder = order
             notes = order.notes
         }
-        .onChange(of: notes) { _, newValue in
+        .onChange(of: notes) {  newValue in
             current.notes = newValue
             DataService.shared.save()
         }
@@ -134,7 +134,7 @@ struct OrderItemRow: View {
             }
             Spacer()
             Stepper("\(qty)", value: $qty, in: 0...20)
-                .onChange(of: qty) { _, new in onQuantityChange(new) }
+                .onChange(of: qty) {  new in onQuantityChange(new) }
             Text(item.subtotal.currencyString).font(.subheadline)
             Button(role: .destructive) { onDelete() } label: {
                 Image(systemName: "trash").foregroundColor(.red)
