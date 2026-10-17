@@ -192,5 +192,3 @@ final class DataService {
         save()
     }
 }
-SWIFT
-echo done
